@@ -7,9 +7,13 @@ class Employee {
   public String employeeType;
   public int hoursWorkedPerWeek;
   public String ssn;
-  
-  
+  public int annualSalary;
+  public int hourlyWage;
 
+  
+  public int getHourlyWage(){
+    return 22;
+  }
   public String getFullName() {// get full name
     return fullName;
   }
@@ -24,6 +28,9 @@ class Employee {
   }
   public String getSsn() {//get ssn
     return ssn;
+  }
+  public int getAnnualSalary() {//get annual salary
+    return annualSalary;
   }
 
   public void setFullName(String fullName) {//set full name
@@ -41,7 +48,13 @@ class Employee {
   public void setSsn(String ssn){// set ssn
     this.ssn = ssn;
   }
-   
+  public void setAnnualSalary(int annualSalary){
+    this.annualSalary = annualSalary;
+  }
+  public void setHourlyWage(int hourlyWage){
+    this.hourlyWage = hourlyWage;
+  }
+  
   public void displayMenu(){
     System.out.println("                                    ");
     System.out.println("---  Welcome To The Human Resources Department ---");
@@ -114,7 +127,9 @@ class Employee {
       }
       else if (chooseEmployeeType == 3){
         employeeType = "Hourly| Contractor";
+        
       }
+      
       System.out.print("Hours worked per week: ");// new employee HPW
       int hoursWorkedPerWeek = scanner.nextInt();
       scanner.nextLine();//to prevent skipping ssn input
@@ -176,6 +191,16 @@ class Employee {
             System.out.println("------------------------------------");
             System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
             System.out.println("------------------------------------");
+            if (employee.getEmployeeType().equals("Salaried| Full-time")){
+              employee.setAnnualSalary(45 * employee.getHourlyWage() * 52);//set annual to 45 hours times hourly wage times 52 weeks
+            }
+            else if (employee.getEmployeeType().equals("Salaried| Part-time")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage() *52);//set annual to hours worked per week times hourly wage times 52 weeks
+            }
+            else if (employee.getEmployeeType().equals("Hourly| Contractor")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage());//this is week by week pay but still use annual variable. hours per week times hourly wage
+            }
+            System.out.println("Annual Salary: " + employee.getAnnualSalary());
             break;
           }
         }
@@ -186,9 +211,10 @@ class Employee {
         String jobTitle = scanner.nextLine();
         for (Employee employee : employees){
           if (employee.getJobTitle().equals(jobTitle)) {
+            //hourlyWage = 22;//setting and hourly wage
             System.out.println("------------------------------------");
             System.out.println("                                    ");
-            System.out.println("---------- Employee Found ----------");
+            System.out.println("---------- Employee Found ----------");// found the employee
             System.out.println("Employee Details:");
             System.out.println("Full Name: " + employee.getFullName());
             System.out.println("Job Title: " + employee.getJobTitle());
@@ -197,6 +223,17 @@ class Employee {
             System.out.println("------------------------------------");
             System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
             System.out.println("------------------------------------");
+            // depending on employee type shows the pay//
+            if (employee.getEmployeeType().equals("Salaried| Full-time")){
+              employee.setAnnualSalary(45 * employee.getHourlyWage()*52);
+            }
+            else if (employee.getEmployeeType().equals("Salaried| Part-time")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage() *52);
+            }
+            else if (employee.getEmployeeType().equals("Hourly| Contractor")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage());
+            }
+            System.out.println("Annual Salary: " + employee.getAnnualSalary());
             break;
           }
         }
@@ -211,9 +248,11 @@ class Employee {
         scanner.nextLine();
         
         switch(chooseEmployeeType){
-          case 1:
+          case 1:// if user chose 1 and full time this runs//
             for (Employee employee : employees){
               if (chooseEmployeeType == 1 && employee.getEmployeeType().equals("Salaried| Full-time")) {
+                //hourlyWage = 22;
+                employee.setAnnualSalary(45 * employee.getHourlyWage());
                 System.out.println("------------------------------------");
                 System.out.println("                                    ");
                 System.out.println("---------- Employee Found ----------");
@@ -225,12 +264,13 @@ class Employee {
                 System.out.println("------------------------------------");
                 System.out.println("Hours per week: "+employee.getHoursWorkedPerWeek());
                 System.out.println("------------------------------------");
-              
+                System.out.println("Annual Salary: "+ employee.getAnnualSalary());
               }
             }
-            case 2:
+            case 2:// if user chose 2 which is part time this runs
               for (Employee employee : employees){
                 if (chooseEmployeeType == 2 && employee.getEmployeeType().equals("Salaried| Part-time")) {
+                  employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage() * 52);
                   System.out.println("------------------------------------");
                   System.out.println("                                    ");
                   System.out.println("---------- Employee Found ----------");
@@ -242,12 +282,14 @@ class Employee {
                   System.out.println("------------------------------------");
                   System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
                   System.out.println("------------------------------------");
-                  
+                  System.out.println("Annual Salary: $" + employee.getAnnualSalary());
                 } 
             }
             case 3:
             for (Employee employee : employees){
               if (chooseEmployeeType == 3 && employee.getEmployeeType().equals("Hourly| Contractor")) {
+                //int hourlyWage = 22;
+                employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage());
                 System.out.println("------------------------------------");
                 System.out.println("                                    ");
                 System.out.println("---------- Employee Found ----------");
@@ -258,7 +300,9 @@ class Employee {
                 System.out.println("SSN: " + employee.getSsn());
                 System.out.println("------------------------------------");
                 System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
+                System.out.println("Hourly wage: $" + employee.getHourlyWage());
                 System.out.println("------------------------------------");
+                System.out.println("Salary for the week: $" + employee.getAnnualSalary());
             
               }
             }
@@ -280,6 +324,17 @@ class Employee {
             System.out.println("------------------------------------");
             System.out.println("Hours per week: "+employee.getHoursWorkedPerWeek());
             System.out.println("------------------------------------");
+            // depending on employee type shows the pay//
+            if (employee.getEmployeeType().equals("Salaried| Full-time")){
+              employee.setAnnualSalary(45 * employee.getHourlyWage()*52);
+            }
+            else if (employee.getEmployeeType().equals("Salaried| Part-time")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage() *52);
+            }
+            else if (employee.getEmployeeType().equals("Hourly| Contractor")){
+              employee.setAnnualSalary(employee.getHoursWorkedPerWeek() * employee.getHourlyWage());
+            }
+            System.out.println("Annual Salary: " + employee.getAnnualSalary());
             break;
           }
         }
@@ -325,7 +380,7 @@ class Employee {
             String answer = scanner.nextLine();
             if (answer.equals("y")){
               employees.remove(employee);
-              System.out.println("--------- Employee Deleted -----------");
+              System.out.println("--------- Employee Deleted -----------");//employee gone//
               break;
             }
             else //if user input 'n' go back to menu
