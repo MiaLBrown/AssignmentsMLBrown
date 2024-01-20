@@ -5,7 +5,10 @@ class Employee {
   public String fullName;
   public String jobTitle;
   public String employeeType;
+  public int hoursWorkedPerWeek;
   public String ssn;
+  
+  
 
   public String getFullName() {// get full name
     return fullName;
@@ -16,21 +19,29 @@ class Employee {
   public String getEmployeeType(){//get employee type
     return employeeType;
   }
+  public int getHoursWorkedPerWeek() {//get hours worked per week
+    return hoursWorkedPerWeek;
+  }
   public String getSsn() {//get ssn
     return ssn;
   }
+
   public void setFullName(String fullName) {//set full name
-      this.fullName = fullName;
+    this.fullName = fullName;
   }
   public void setJobTitle(String jobTitle){//set job title
-      this.jobTitle = jobTitle;
+    this.jobTitle = jobTitle;
   }
   public void setEmployeeType(String employeeType){// set employee type
-      this.employeeType = employeeType;
+    this.employeeType = employeeType;
+  }
+  public void setHoursWorkedPerWeek(int hoursWorkedPerWeek){
+    this.hoursWorkedPerWeek = hoursWorkedPerWeek;
   }
   public void setSsn(String ssn){// set ssn
-      this.ssn = ssn;
+    this.ssn = ssn;
   }
+   
   public void displayMenu(){
     System.out.println("                                    ");
     System.out.println("---  Welcome To The Human Resources Department ---");
@@ -104,20 +115,30 @@ class Employee {
       else if (chooseEmployeeType == 3){
         employeeType = "Hourly| Contractor";
       }
+      System.out.print("Hours worked per week: ");// new employee HPW
+      int hoursWorkedPerWeek = scanner.nextInt();
+      scanner.nextLine();//to prevent skipping ssn input
       System.out.print("Enter Employee ssn: ");// new employee ssn
       String ssn = scanner.nextLine();
      
       System.out.println("                                    ");
       System.out.println("-------- New Employee Added --------");
-      System.out.println("Employee Full Name: " + fullName);//show new employee name
-      System.out.println("Employee job title: " + jobTitle);//show new employee job title
+      System.out.println("Full Name: " + fullName);//show new employee name
+      System.out.println("Job title: " + jobTitle);//show new employee job title
       System.out.println("Employee Type: " + employeeType);//show new employee type
-      System.out.println("Employee ssn: " + ssn);//show new employee ssn
-
+      System.out.println("SSN: " + ssn);//show new employee ssn
+      System.out.println("------------------------------------");
+      System.out.println("Hours per week: "+ hoursWorkedPerWeek);
+      System.out.println("------------------------------------");
+      
+      
+      
+      
       Employee newemployee = new Employee();//adding the New employee to list
       newemployee.setFullName(fullName);
       newemployee.setJobTitle(jobTitle);
       newemployee.setEmployeeType(employeeType);
+      newemployee.setHoursWorkedPerWeek(hoursWorkedPerWeek);
       newemployee.setSsn(ssn);
       employees.add(newemployee);
       
@@ -152,6 +173,9 @@ class Employee {
             System.out.println("Job Title: " + employee.getJobTitle());//job title  
             System.out.println("Employee Type: " + employee.getEmployeeType());//employee type
             System.out.println("SSN: " + employee.getSsn());//ssn
+            System.out.println("------------------------------------");
+            System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
+            System.out.println("------------------------------------");
             break;
           }
         }
@@ -170,6 +194,9 @@ class Employee {
             System.out.println("Job Title: " + employee.getJobTitle());
             System.out.println("Employee Type: " + employee.getEmployeeType());
             System.out.println("SSN: " + employee.getSsn());
+            System.out.println("------------------------------------");
+            System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
+            System.out.println("------------------------------------");
             break;
           }
         }
@@ -195,6 +222,9 @@ class Employee {
                 System.out.println("Job Title: " + employee.getJobTitle());
                 System.out.println("Employee Type: " + employee.getEmployeeType());
                 System.out.println("SSN: " + employee.getSsn());
+                System.out.println("------------------------------------");
+                System.out.println("Hours per week: "+employee.getHoursWorkedPerWeek());
+                System.out.println("------------------------------------");
               
               }
             }
@@ -209,6 +239,9 @@ class Employee {
                   System.out.println("Job Title: " + employee.getJobTitle());
                   System.out.println("Employee Type: " + employee.getEmployeeType());
                   System.out.println("SSN: " + employee.getSsn());
+                  System.out.println("------------------------------------");
+                  System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
+                  System.out.println("------------------------------------");
                   
                 } 
             }
@@ -223,6 +256,9 @@ class Employee {
                 System.out.println("Job Title: " + employee.getJobTitle());
                 System.out.println("Employee Type: " + employee.getEmployeeType());
                 System.out.println("SSN: " + employee.getSsn());
+                System.out.println("------------------------------------");
+                System.out.println("Hours per week: "+ employee.getHoursWorkedPerWeek());
+                System.out.println("------------------------------------");
             
               }
             }
@@ -241,6 +277,9 @@ class Employee {
             System.out.println("Job Title: " + employee.getJobTitle());
             System.out.println("Employee Type: " + employee.getEmployeeType());
             System.out.println("SSN: " + employee.getSsn());
+            System.out.println("------------------------------------");
+            System.out.println("Hours per week: "+employee.getHoursWorkedPerWeek());
+            System.out.println("------------------------------------");
             break;
           }
         }
@@ -276,6 +315,9 @@ class Employee {
             System.out.println("Job Title: " + employee.getJobTitle());
             System.out.println("Employee Type: " + employee.getEmployeeType());
             System.out.println("SSN: " + employee.getSsn());
+            System.out.println("------------------------------------");
+            System.out.println("Hours per week: "+employee.getHoursWorkedPerWeek());
+            System.out.println("------------------------------------");
             System.out.println("------------------------------------");
             System.out.println("                                    ");
             System.out.println("Are you sure you want to delete this employee?");
