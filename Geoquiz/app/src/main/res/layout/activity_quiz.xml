@@ -1,31 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/world_map_iphone"
+    android:backgroundTintMode="screen"
+    android:foregroundTint="#EAE7E7"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-condensed"
         android:padding="24dp"
-        android:text="@string/question_text" />
+        android:textColor="#BC9885"
+        android:textSize="20sp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
+
+
         <Button
             android:id="@+id/true_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/true_button"/>
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/free_blue_card_icon_460_thumb"
+            android:paddingStart="2dp"
+            android:paddingBottom="40dp"
+            android:text="@string/true_button"
+            android:textAlignment="center"
+            android:textColor="#E8DFDF"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
 
         <Button
             android:id="@+id/false_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/false_button"/>
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/free_red_card_icon_460_thumb"
+            android:paddingEnd="9dp"
+            android:paddingBottom="40dp"
+            android:text="@string/false_button"
+            android:textAlignment="center"
+            android:textColor="#E8DFDF"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/next_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/white"
+        android:rotationY="2"
+        android:text="@string/next_button"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/cheat_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="273dp"
+        android:layout_height="142dp"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/cartoon_devil_pictures_37"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="8sp"
+        android:paddingStart="30dp"
+        android:paddingRight="20dp"
+        android:paddingTop="70dp"
+        android:text="@string/cheat_button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+    <TextView
+        android:id="@+id/score_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="18dp"
+        android:background="@color/black"
+        android:padding="10dp"
+        android:text="@string/score_output"
+        android:textColor="#C9A690" />
+    <TextView
+        android:id="@+id/uses_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/black"
+        android:padding="12dp"
+        android:text="@string/uses_output"
+        android:textColor="#CEA991" />
 </LinearLayout>
