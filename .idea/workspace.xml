@@ -145,6 +145,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708061930236</updated>
     </task>
+    <task id="LOCAL-00001" summary="This is the calculator app, I have added Multiply and divide. The only issue is that the button colors for operators does not change when pushed.">
+      <option name="closed" value="true" />
+      <created>1708066666731</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708066666731</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="This is the calculator app, I have added Multiply and divide. The only issue is that the button colors for operators does not change when pushed." />
+    <option name="LAST_COMMIT_MESSAGE" value="This is the calculator app, I have added Multiply and divide. The only issue is that the button colors for operators does not change when pushed." />
   </component>
 </project>
