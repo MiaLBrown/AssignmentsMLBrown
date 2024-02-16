@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="question_australia">Canberra is the capital of Australia.</string>
+    <string name="false_button">False</string>
+    <string name="true_button">True</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Incorrect</string>
+
+    <string name="question_oceans">The Pacific Ocean is larger than
+        the Atlantic Ocean.</string>
+    <string name="question_mideast">The Suez Canal connects the Red Sea
+        and the Indian Ocean.</string>
+    <string name="question_africa">The source of the Nile River is in Egypt.</string>
+    <string name="question_americas">The Amazon River is the longest river
+        in the Americas.</string>
+    <string name="question_asia">Lake Baikal is the world\'s oldest and deepest
+        freshwater lake.</string>
+    <string name="question_sahara">The Sahara Desert is located in Africa</string>
+    <string name="question_tuvalu">Tuvalu is the country with the smallest population.</string>
+    <string name="question_afghanistan">Kabul is the capital of Afghanistan.</string>
+    <string name="question_france">France and Slovenia share a border.</string>
+    <string name="question_australia2">Australia is wider than the moon.</string>
+    <string name="question_congo">The Congo River is the second-longest river in Africa.</string>
+
+
+    <string name="warning_text">WARNING Are you sure??</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="cheat_button">CHEAT</string>
+    <string name="score_output">Score:</string>
+    <string name="uses_output">Uses:</string>
+    <string name="judgement_toast">cheating is wrong</string>
+    <string name="title_activity_cheat">Cheat</string>
+    <string name="next_button">Next</string>
+
+
+
+
+</resources>
