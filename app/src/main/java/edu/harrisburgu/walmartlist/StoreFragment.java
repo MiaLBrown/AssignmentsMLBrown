@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;  // Make sure to import Fragment from androidx
 
-public class StoreFragment extends Fragment {
+public class StoreFragment extends Fragment { // store frag
 
     private final Store store;
 
