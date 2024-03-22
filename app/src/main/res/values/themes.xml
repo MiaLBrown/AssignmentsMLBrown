@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
     <style name="Base.Theme.CalculatorAppp" parent="Theme.Material3.DayNight.NoActionBar">
+=======
+    <style name="Base.Theme.WalmartList" parent="Theme.Material3.DayNight.NoActionBar">
+>>>>>>> cde8271ac0f7508a8a8c4070e335f436e6dcba57
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+<<<<<<< HEAD
     <style name="Theme.CalculatorAppp" parent="Base.Theme.CalculatorAppp" />
+=======
+    <style name="Theme.WalmartList" parent="Base.Theme.WalmartList" />
+>>>>>>> cde8271ac0f7508a8a8c4070e335f436e6dcba57
 </resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="welcome">Welcome to LoginApp!</string>
+    <string name="title">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="success">Login Succeeded</string>
+    <string name="failure">Login Failed</string>
+</resources>
