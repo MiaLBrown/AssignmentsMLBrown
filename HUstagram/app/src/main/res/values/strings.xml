@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HUstagram</string>
+    <string name="Capture">Capture</string>
+    <string name="List">List</string>
+    <string name="upload">upload</string>
+    <string name="comment">Enter your comment</string>
+</resources>
