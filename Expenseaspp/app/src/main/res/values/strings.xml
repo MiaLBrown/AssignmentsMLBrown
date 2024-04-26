@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Expenseaspp</string>
+    <string name="app_name">Expense App</string>
+    <string name="saving_goal">Savings Goal</string>
+    <string name="back_button">Back</string>
+    <string name="save">Save</string>
+    <string name="total">Total Saved</string>
+    <string name="goal">Goal</string>
+    <string name="add_saving">Add Saving</string>
+    <string name="grocery_list">Grocery List</string>
+    <string name="saving">Saving for</string>
+    <string name="saving_label">Saving:</string>
+    <string name="total_label">Total:</string>
+    <string name="goal_label">Goal:</string>
+    <string name="edit_button">Edit</string>
+    <string name="save_button">Save</string>
+    <string name="totalEditText">Enter new total:</string>
+    <string name="savingEditText">Enter new saving:</string>
+    <string name="goalEditText">Enter new goal total:</string>
+    <string name="add_button">add</string>
+    <string name="expense">Expenses</string>
+    <string name="expense_total">Expense Total</string>
+    <string name="add_expense">add</string>
 </resources>
